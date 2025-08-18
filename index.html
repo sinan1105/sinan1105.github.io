@@ -50,24 +50,15 @@
                 <h1 id="greeting" class="text-responsive font-bold tracking-tight gradient-text mb-6">
                     Hello, I'm Sinan K.
                 </h1>
-                 <div class="relative profile-picture-container">
+                <div class="relative profile-picture-container">
                     <img src="assets/img.jpg" alt="Your Profile Picture"
-                        class="rounded-full mx-auto w-36 h-36 object-cover shadow-2xl border-4 border-transparent hover:border-blue-500 transition-all duration-300">
-                        <br>    
-                    <div
-                        class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 hover:opacity-20 transition-opacity duration-300">
-                    </div>
-                    <div class="profile-overlay">
-                        <div class="profile-text">
-                            <h3 class="text-lg font-bold text-white mb-2">Sinan K</h3>
-                            <p class="text-sm text-gray-200">AI & Data Science Student</p>
-                            <p class="text-xs text-gray-300 mt-1">Passionate about Technology</p>
-                        </div>
-                    </div>
+                        class="rounded-full mx-auto w-48 h-48 object-cover shadow-2xl border-4 border-transparent hover:border-blue-500 transition-all duration-300">
+                    <br>
                 </div>
-                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed" style="font-family: 'Times New Roman', Times, serif">
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed"
+                    style="font-family: 'Times New Roman', Times, serif">
                     Student, Artist and Maths Nerd</p>
-               
+
             </div>
         </section>
 
@@ -124,39 +115,41 @@
 
         <!-- Projects Section (jQuery Interactive) -->
         <section id="projects" class="py-20 md:py-32">
-            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Interactive Projects</h2>
-            <div class="max-w-5xl mx-auto">
-                <!-- Main Display Area -->
-                <div id="main-project-display"
-                    class="bg-gray-800 rounded-lg shadow-xl p-6 mb-8 flex flex-col md:flex-row gap-6 items-center transition-all duration-500">
-                    <img id="main-project-image" src="https://placehold.co/600x400/1f2937/d1d5db?text=Select+a+Project"
-                        alt="Main Project" class="w-full md:w-1/2 rounded-lg">
-                    <div class="w-full md:w-1/2">
-                        <h3 id="main-project-title" class="text-2xl font-bold text-white mb-2"></h3>
-                        <p id="main-project-description" class="text-gray-300"></p>
-                    </div>
-                </div>
-
-                <!-- Project Thumbnails -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
-                        data-title="Project A - Hand Cricket Game"
-                        data-description="THand Cricket Game (Python/Tkinter): Developed a classic hand cricket game with a modern graphical user interface (GUI) using Python and Tkinter. The application features a dynamic player-vs-AI gameplay, an interactive toss mechanism, and real-time score updates. This project demonstrates skills in GUI development, game logic implementation, and creating an engaging user experience for a popular casual game."
-                        data-image="assets/hand.jpg">
-                        <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+A" alt="Project A Thumbnail"
-                            class="w-full h-auto object-cover">
-                    </div>
-                    <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
-                        data-title="Project B - PDF Management System"
-                        data-description="PDF Toolkit (Python/Tkinter): Developed a lightweight desktop application for PDF management using Python and Tkinter. The tool features a clean GUI for merging multiple PDFs, removing pages, and splitting documents by page range. This project demonstrates skills in GUI development, file I/O, and leveraging libraries like PyPDF2 to build a practical utility."
-                        data-image="assets/pdf.jpg">
-                        <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+B" alt="Project B Thumbnail"
-                            class="w-full h-auto object-cover">
-                    </div>
-                    <!-- Add more thumbnails as needed -->
-                </div>
+    <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Interactive Projects</h2>
+    <div class="max-w-5xl mx-auto">
+        <div id="main-project-display"
+            class="bg-gray-800 rounded-lg shadow-xl p-6 mb-8 flex flex-col md:flex-row gap-6 items-center transition-all duration-500">
+            <img id="main-project-image" src="https://placehold.co/600x400/1f2937/d1d5db?text=Select+a+Project"
+                alt="Main Project" class="w-full md:w-1/2 rounded-lg">
+            <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-white mb-2">
+                    <a id="main-project-title" href="#" target="_blank" class="text-white hover:text-blue-400 transition-colors duration-300 underline"></a>
+                </h3>
+                <p id="main-project-description" class="text-gray-300"></p>
             </div>
-        </section>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
+                 data-title="Project A - Hand Cricket Game"
+                 data-description="THand Cricket Game (Python/Tkinter): Developed a classic hand cricket game with a modern graphical user interface (GUI) using Python and Tkinter. The application features a dynamic player-vs-AI gameplay, an interactive toss mechanism, and real-time score updates. This project demonstrates skills in GUI development, game logic implementation, and creating an engaging user experience for a popular casual game."
+                 data-image="assets/hand.jpg"
+                 data-github="https://github.com/sinan1105/handcricket">
+                <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+A" alt="Project A Thumbnail"
+                     class="w-full h-auto object-cover">
+            </div>
+
+            <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
+                 data-title="Project B - PDF Management System"
+                 data-description="PDF Toolkit (Python/Tkinter): Developed a lightweight desktop application for PDF management using Python and Tkinter. The tool features a clean GUI for merging multiple PDFs, removing pages, and splitting documents by page range. This project demonstrates skills in GUI development, file I/O, and leveraging libraries like PyPDF2 to build a practical utility."
+                 data-image="assets/pdf.jpg"
+                 data-github="https://github.com/sinan1105/pdftoolkit">
+                <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+B" alt="Project B Thumbnail"
+                     class="w-full h-auto object-cover">
+            </div>
+            </div>
+    </div>
+</section>
 
         <!-- Dev.to Articles Section (RSS Feed) -->
         <section id="articles" class="py-20 md:py-32">
@@ -174,14 +167,22 @@
         <section id="weather" class="py-20 md:py-32">
             <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Live Weather</h2>
             <div class="max-w-xl mx-auto corporate-card p-6">
-                <div id="weather-info" class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <input type="text" id="city-input" placeholder="Enter city name..."
+                        class="p-2 rounded-l-lg border-none focus:outline-none text-black w-2/3">
+                    <button id="search-btn"
+                        class="p-2 rounded-r-lg bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div id="weather-inf" class="text-center">
                 </div>
             </div>
         </section>
 
-        <script src="js/weather.js" defer></script>
+        <!--<script src="js/weather.js" defer></script>>
 
-        <!-- Contact Section with iframe and social icons -->
+        Contact Section with iframe and social icons -->
         <section id="contact" class="py-20 md:py-32">
             <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Contact</h2>
             <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-12 mb-12">

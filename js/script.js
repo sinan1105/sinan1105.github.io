@@ -3,7 +3,7 @@
 
 // Configuration
 const CONFIG = {
-    weatherApiKey: 'YOUR_OPENWEATHERMAP_API_KEY', // Replace with your actual API key
+    weatherApiKey: 'a0d8c2864a437a7d9676476b6c711d20', // Replace with your actual API key
     devToUsername: 'gemini-code-assist', // Replace with your Dev.to username
     articlesToShow: 5,
     animationDelay: 100
@@ -106,49 +106,55 @@ const Greeting = {
 };
 
 // Project Gallery functionality
+// Project Gallery functionality
 const ProjectGallery = {
-    init: () => {
-        // Set initial project display
-        const initialThumbnail = document.querySelector('.project-thumbnail');
-        if (initialThumbnail) {
-            ProjectGallery.updateMainDisplay(initialThumbnail);
-        }
+    init: () => {
+        // Set initial project display
+        const initialThumbnail = document.querySelector('.project-thumbnail');
+        if (initialThumbnail) {
+            ProjectGallery.updateMainDisplay(initialThumbnail);
+        }
 
-        // Add click event listeners
-        document.querySelectorAll('.project-thumbnail').forEach(thumbnail => {
-            thumbnail.addEventListener('click', () => {
-                ProjectGallery.updateMainDisplay(thumbnail);
-            });
-        });
-    },
+        // Add click event listeners
+        document.querySelectorAll('.project-thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                ProjectGallery.updateMainDisplay(thumbnail);
+            });
+        });
+    },
 
-    updateMainDisplay: (thumbnail) => {
-        const title = thumbnail.dataset.title;
-        const description = thumbnail.dataset.description;
-        const image = thumbnail.dataset.image;
+    updateMainDisplay: (thumbnail) => {
+        const title = thumbnail.dataset.title;
+        const description = thumbnail.dataset.description;
+        const image = thumbnail.dataset.image;
+        const githubLink = thumbnail.dataset.github; // NEW: Get the GitHub link
 
-        const mainTitle = document.getElementById('main-project-title');
-        const mainDescription = document.getElementById('main-project-description');
-        const mainImage = document.getElementById('main-project-image');
+        const mainTitleLink = document.getElementById('main-project-title'); // Changed to get the <a> tag
+        const mainDescription = document.getElementById('main-project-description');
+        const mainImage = document.getElementById('main-project-image');
 
-        // Add corporate animation effect
-        const mainDisplay = document.getElementById('main-project-display');
-        if (mainDisplay) {
-            mainDisplay.style.opacity = '0';
-            mainDisplay.style.transform = 'scale(0.95)';
-            
-            setTimeout(() => {
-                if (mainTitle) mainTitle.textContent = title;
-                if (mainDescription) mainDescription.textContent = description;
-                if (mainImage) mainImage.src = image;
-                
-                mainDisplay.style.opacity = '1';
-                mainDisplay.style.transform = 'scale(1)';
-            }, 200);
-        }
-    }
+        // Add corporate animation effect
+        const mainDisplay = document.getElementById('main-project-display');
+        if (mainDisplay) {
+            mainDisplay.style.opacity = '0';
+            mainDisplay.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                // NEW: Update the text content and href of the <a> tag
+                if (mainTitleLink) {
+                    mainTitleLink.textContent = title;
+                    mainTitleLink.href = githubLink;
+                }
+                
+                if (mainDescription) mainDescription.textContent = description;
+                if (mainImage) mainImage.src = image;
+                
+                mainDisplay.style.opacity = '1';
+                mainDisplay.style.transform = 'scale(1)';
+            }, 200);
+        }
+    }
 };
-
 // Dev.to Articles functionality
 const DevToArticles = {
     async fetchArticles() {
@@ -202,10 +208,16 @@ const DevToArticles = {
     }
 };
 
+
+const cityname="Kochi"
+
+
 // Weather functionality
+
+
 const Weather = {
     async getWeather(city) {
-        const weatherInfo = document.getElementById('weather-info');
+        const weatherInfo = document.getElementById('weather-inf');
         if (!weatherInfo) return;
 
         if (CONFIG.weatherApiKey === 'YOUR_OPENWEATHERMAP_API_KEY') {
@@ -215,7 +227,7 @@ const Weather = {
 
         weatherInfo.innerHTML = '<p class="text-gray-400"><div class="corporate-spinner mx-auto"></div> Fetching weather data...</p>';
 
-        const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${CONFIG.weatherApiKey}&units=metric`;
+        const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${CONFIG.weatherApiKey}&units=metric`;
 
         try {
             const response = await fetch(apiURL);
@@ -232,7 +244,7 @@ const Weather = {
     },
 
     displayWeather(data) {
-        const weatherInfo = document.getElementById('weather-info');
+        const weatherInfo = document.getElementById('weather-inf');
         if (!weatherInfo) return;
 
         const cityName = data.name;
@@ -268,29 +280,32 @@ const Weather = {
     },
 
     init() {
-        const getWeatherBtn = document.getElementById('get-weather-btn');
+        const searchBtn = document.getElementById('search-btn');
         const cityInput = document.getElementById('city-input');
-
-        if (getWeatherBtn && cityInput) {
-            getWeatherBtn.addEventListener('click', () => {
-                const city = cityInput.value.trim();
-                if (city) {
-                    Weather.getWeather(city);
-                } else {
-                    Utils.showNotification('Please enter a city name', 'error');
+        
+        // Add event listener for the search button
+        if (searchBtn && cityInput) {
+            searchBtn.addEventListener('click', () => {
+                const cityName = cityInput.value.trim();
+                if (cityName) {
+                    this.getWeather(cityName);
                 }
             });
 
-            // Allow Enter key to submit
-            cityInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    getWeatherBtn.click();
+            // Add event listener for the "Enter" key on the input field
+            cityInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    searchBtn.click();
                 }
             });
         }
     }
 };
 
+// Initialize the weather application
+document.addEventListener('DOMContentLoaded', () => {
+    Weather.init();
+});
 // Contact Form functionality
 const ContactForm = {
     init() {
