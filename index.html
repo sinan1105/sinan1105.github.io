@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinan K - Portfolio</title>
+    <!-- External CSS and JavaScript files for better organization and performance -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-gray-50 antialiased leading-relaxed gradient-bg dark-mode"
+    style="background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.85)), url('assets/bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+
+    <!-- Header Section -->
+    <header id="home" class="sticky top-0 z-50 corporate-header shadow-lg">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div>
+                <img src="assets/giphy.gif" alt="Animated GIF" class="w-8 h-8 inline-block mr-2">
+                <a href="#"
+                    class="text-xl font-bold gradient-text hover:text-blue-300 transition duration-300 animate-text-shimmer">Sinan
+                    K</a>
+            </div>
+            <nav class="space-x-6 hidden md:block corporate-nav">
+                <a href="#profile" class="text-gray-300 hover:text-white transition duration-300 focus-ring">Profile</a>
+                <a href="#cv" class="text-gray-300 hover:text-white transition duration-300 focus-ring">CV</a>
+                <a href="#projects"
+                    class="text-gray-300 hover:text-white transition duration-300 focus-ring">Projects</a>
+                <a href="#articles"
+                    class="text-gray-300 hover:text-white transition duration-300 focus-ring">Articles</a>
+                <a href="#weather" class="text-gray-300 hover:text-white transition duration-300 focus-ring">Weather</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300 focus-ring">Contact</a>
+            </nav>
+        </div>
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4">
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center corporate-section">
+            <div class="animate-scale-in">
+                <h1 id="greeting" class="text-responsive font-bold tracking-tight gradient-text mb-6">
+                    Hello, I'm Sinan K.
+                </h1>
+                 <div class="relative profile-picture-container">
+                    <img src="assets/img.jpg" alt="Your Profile Picture"
+                        class="rounded-full mx-auto w-36 h-36 object-cover shadow-2xl border-4 border-transparent hover:border-blue-500 transition-all duration-300">
+                        <br>    
+                    <div
+                        class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 hover:opacity-20 transition-opacity duration-300">
+                    </div>
+                    <div class="profile-overlay">
+                        <div class="profile-text">
+                            <h3 class="text-lg font-bold text-white mb-2">Sinan K</h3>
+                            <p class="text-sm text-gray-200">AI & Data Science Student</p>
+                            <p class="text-xs text-gray-300 mt-1">Passionate about Technology</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed" style="font-family: 'Times New Roman', Times, serif">
+                    Student, Artist and Maths Nerd</p>
+               
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="py-20 md:py-32">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Profile</h2>
+                <p class="text-gray-300 text-lg leading-relaxed text-justify">
+                    A B.Tech student specializing in Artificial Intelligence and Data Science, I possess a strong
+                    foundation in coding and mathematics. My passion lies in applying these skills to solve complex
+                    challenges. I am also an avid educator, enjoying the process of breaking down technical topics and
+                    teaching others. My hobby of making intricate origami models has taught me patience and
+                    precision—qualities I apply to my technical work.
+                </p>
+            </div>
+        </section>
+
+        <!-- CV & Education Section -->
+        <section id="cv" class="py-20 md:py-32">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">CV & Technical Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Education -->
+                <article class="bg-gray-800 rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-4">Education</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>BTech in Artificial Intelligence and Data Science (Persuing), RSET.</li>
+                        <li>High School Science, St Antony’s Public School. </li>
+                    </ul>
+                </article>
+                <!-- Skills -->
+                <article class="bg-gray-800 rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-4">Skills & Expertise</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Programming Languages: JavaScript, Python, C, Java, HTML, R, MySql</li>
+                        <li>Tools & Technologies: VS Code, Oracle DB.</li>
+                        <li>Mathematical Skills: Linear Algebra, Probability Theory, Calculus and Optimization. </li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Resume Download Button -->
+            <div class="text-center mt-12">
+                <a href="assets/cv.pdf" target="_blank"
+                    class="resume-btn btn-animate inline-flex items-center px-8 py-4 rounded-lg text-white font-semibold transition-all duration-300 hover:scale-105">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    View Full Resume
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Section (jQuery Interactive) -->
+        <section id="projects" class="py-20 md:py-32">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Interactive Projects</h2>
+            <div class="max-w-5xl mx-auto">
+                <!-- Main Display Area -->
+                <div id="main-project-display"
+                    class="bg-gray-800 rounded-lg shadow-xl p-6 mb-8 flex flex-col md:flex-row gap-6 items-center transition-all duration-500">
+                    <img id="main-project-image" src="https://placehold.co/600x400/1f2937/d1d5db?text=Select+a+Project"
+                        alt="Main Project" class="w-full md:w-1/2 rounded-lg">
+                    <div class="w-full md:w-1/2">
+                        <h3 id="main-project-title" class="text-2xl font-bold text-white mb-2"></h3>
+                        <p id="main-project-description" class="text-gray-300"></p>
+                    </div>
+                </div>
+
+                <!-- Project Thumbnails -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
+                        data-title="Project A - Hand Cricket Game"
+                        data-description="THand Cricket Game (Python/Tkinter): Developed a classic hand cricket game with a modern graphical user interface (GUI) using Python and Tkinter. The application features a dynamic player-vs-AI gameplay, an interactive toss mechanism, and real-time score updates. This project demonstrates skills in GUI development, game logic implementation, and creating an engaging user experience for a popular casual game."
+                        data-image="assets/hand.jpg">
+                        <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+A" alt="Project A Thumbnail"
+                            class="w-full h-auto object-cover">
+                    </div>
+                    <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
+                        data-title="Project B - PDF Management System"
+                        data-description="PDF Toolkit (Python/Tkinter): Developed a lightweight desktop application for PDF management using Python and Tkinter. The tool features a clean GUI for merging multiple PDFs, removing pages, and splitting documents by page range. This project demonstrates skills in GUI development, file I/O, and leveraging libraries like PyPDF2 to build a practical utility."
+                        data-image="assets/pdf.jpg">
+                        <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+B" alt="Project B Thumbnail"
+                            class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Add more thumbnails as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dev.to Articles Section (RSS Feed) -->
+        <section id="articles" class="py-20 md:py-32">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">My Articles (Dev.to Feed)</h2>
+            <div class="max-w-3xl mx-auto bg-gray-800 rounded-lg shadow-xl p-6">
+                <ul id="dev-articles" class="space-y-4">
+                    <!-- Articles will be populated here by JavaScript -->
+                    <li class="text-center text-gray-400">Loading articles...</li>
+                    <li class="text-center text-gray-400">HEhe articles...</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Weather Section (OpenWeatherMap API) -->
+        <section id="weather" class="py-20 md:py-32">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Live Weather</h2>
+            <div class="max-w-xl mx-auto corporate-card p-6">
+                <div id="weather-info" class="text-center">
+                </div>
+            </div>
+        </section>
+
+        <script src="js/weather.js" defer></script>
+
+        <!-- Contact Section with iframe and social icons -->
+        <section id="contact" class="py-20 md:py-32">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Contact</h2>
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
+                <!-- Contact Form -->
+                <form id="contact-form" class="corporate-form p-6 space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full p-3 rounded-lg bg-gray-700 text-white form-input focus-ring">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full p-3 rounded-lg bg-gray-700 text-white form-input focus-ring">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full p-3 rounded-lg bg-gray-700 text-white form-input focus-ring"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-500 text-white font-medium py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 btn-animate">
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Iframe for Google Maps -->
+                <div class="corporate-card overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1234567890123!2d76.35797!3d9.99309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807ad1cxyz:0xabcdef1234567890!2sRajagiri%20School%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v0000000000000"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center space-x-6 mt-12">
+                <a href="https://github.com/sinan1105" target="_blank"
+                    class="text-gray-300 hover:text-white transition duration-300 flex items-center social-icon">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.5.092.682-.217.682-.483 0-.237-.008-.88-.013-1.724-2.782.604-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.91-.62.069-.608.069-.608 1.007.07 1.532 1.03 1.532 1.03.89 1.528 2.336 1.085 2.903.83.091-.645.349-1.085.635-1.336-2.22-.252-4.555-1.11-4.555-4.93 0-1.088.388-1.978 1.026-2.674-.103-.253-.445-1.264.098-2.63c0 0 .84-.268 2.75 1.025A9.638 9.638 0 0112 6.866c.85.006 1.705.114 2.504.331 1.906-1.293 2.746-1.025 2.746-1.025.544 1.366.202 2.377.099 2.63.64.696 1.025 1.586 1.025 2.674 0 3.828-2.339 4.674-4.562 4.922.357.307.675.915.675 1.848 0 1.336-.012 2.415-.012 2.74 0 .268.18.578.688.482C19.138 20.2 22 16.444 22 12.017 22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/sinan-mohammedkutty-koorikkattil-3a406a2a1/" target="_blank"
+                    class="text-gray-300 hover:text-white transition duration-300 flex items-center social-icon">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.568c0-1.325-.028-3.044-1.85-3.044-1.853 0-2.136 1.445-2.136 2.946v5.666H9.153V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.606 0 4.267 2.365 4.267 5.454v6.286zM5.337 7.027c-1.144 0-2.073-.93-2.073-2.074s.929-2.074 2.073-2.074 2.073.93 2.073 2.074-.929 2.074-2.073 2.074zM7.006 20.452H3.664V9h3.342v11.452z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Sinan K. All Rights Reserved.</p>
+    </footer>
+
+    <!-- External JavaScript file for enhanced functionality -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
