@@ -4,249 +4,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinan K - Portfolio</title>
-    <!-- External CSS and JavaScript files for better organization and performance -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sinan K — AI & Data Science</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="bg-gray-900 text-gray-50 antialiased leading-relaxed gradient-bg dark-mode"
-    style="background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.85)), url('assets/bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;">
+<body>
+    <!-- Particle canvas background -->
+    <canvas id="particles-canvas"></canvas>
 
-    <!-- Header Section -->
-    <header id="home" class="sticky top-0 z-50 corporate-header shadow-lg">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <div>
-                <img src="assets/giphy.gif" alt="Animated GIF" class="w-8 h-8 inline-block mr-2">
-                <a href="#"
-                    class="text-xl font-bold gradient-text hover:text-blue-300 transition duration-300 animate-text-shimmer">Sinan
-                    K</a>
-            </div>
-            <nav class="space-x-6 hidden md:block corporate-nav">
-                <a href="#profile" class="text-gray-300 hover:text-white transition duration-300 focus-ring">Profile</a>
-                <a href="#cv" class="text-gray-300 hover:text-white transition duration-300 focus-ring">CV</a>
-                <a href="#projects"
-                    class="text-gray-300 hover:text-white transition duration-300 focus-ring">Projects</a>
-                <a href="#articles"
-                    class="text-gray-300 hover:text-white transition duration-300 focus-ring">Articles</a>
-                <a href="#weather" class="text-gray-300 hover:text-white transition duration-300 focus-ring">Weather</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300 focus-ring">Contact</a>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <button id="close-mobile-menu" class="close-mobile-btn">&times;</button>
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#certifications" class="mobile-nav-link">Certs</a>
+            <a href="#articles" class="mobile-nav-link">Articles</a>
+            <a href="#weather" class="mobile-nav-link">Weather</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-inner">
+            <a href="#home" class="logo-link">
+                <img src="assets/giphy.gif" alt="logo" class="logo-gif">
+                <span class="logo-text">Sinan K</span>
+            </a>
+            <nav class="desktop-nav" id="desktop-nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certs</a>
+                <a href="#articles">Articles</a>
+                <a href="#weather">Weather</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <button id="hamburger-btn" class="hamburger-btn">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
-        </div>
+        <div class="scroll-progress-bar"><div class="scroll-progress-fill" id="scroll-progress"></div></div>
     </header>
 
-    <main class="container mx-auto px-4">
-
+    <main>
         <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center text-center corporate-section">
-            <div class="animate-scale-in">
-                <h1 id="greeting" class="text-responsive font-bold tracking-tight gradient-text mb-6">
-                    Hello, I'm Sinan K.
-                </h1>
-                <div class="relative profile-picture-container">
-                    <img src="assets/img.jpg" alt="Your Profile Picture"
-                        class="rounded-full mx-auto w-48 h-48 object-cover shadow-2xl border-4 border-transparent hover:border-blue-500 transition-all duration-300">
-                    <br>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">AI & Data Science • CGPA 9.55</div>
+                <h1 class="hero-title" id="greeting">Hello, I'm Sinan K.</h1>
+                <p class="hero-subtitle">B.Tech Student · ML Engineer · Origami Artist · Math Nerd</p>
+                <div class="hero-profile-wrap">
+                    <div class="profile-ring">
+                        <img src="assets/img.jpg" alt="Sinan K" class="profile-img">
+                        <div class="profile-hover-overlay">
+                            <p class="profile-hover-text">Sinan Mohammedkutty Koorikkattil</p>
+                            <p class="profile-hover-sub">New Panvel, Maharashtra</p>
+                        </div>
+                    </div>
+                    <div class="origami-float">
+                        <img src="assets/giphy.gif" alt="origami" class="origami-gif">
+                    </div>
                 </div>
-                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed"
-                    style="font-family: 'Times New Roman', Times, serif">
-                    Student, Artist and Maths Nerd</p>
-
+                <div class="hero-cta-row">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="assets/cv.pdf" target="_blank" class="btn-outline">
+                        <i class="fas fa-download"></i> Resume
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-pill"><span class="stat-num">9.55</span><span class="stat-label">CGPA</span></div>
+                    <div class="stat-pill"><span class="stat-num">5+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat-pill"><span class="stat-num">8+</span><span class="stat-label">Certifications</span></div>
+                </div>
+            </div>
+            <div class="hero-scroll-hint">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
             </div>
         </section>
 
-        <!-- Profile Section -->
-        <section id="profile" class="py-20 md:py-32">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Profile</h2>
-                <p class="text-gray-300 text-lg leading-relaxed text-justify">
-                    A B.Tech student specializing in Artificial Intelligence and Data Science, I possess a strong
-                    foundation in coding and mathematics. My passion lies in applying these skills to solve complex
-                    challenges. I am also an avid educator, enjoying the process of breaking down technical topics and
-                    teaching others. My hobby of making intricate origami models has taught me patience and
-                    precision—qualities I apply to my technical work.
-                </p>
+        <!-- About Section -->
+        <section id="about" class="section-pad">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text-col">
+                        <p class="about-para">
+                            Results-driven AI & Data Science undergraduate with a CGPA of <strong>9.55/10</strong>, 
+                            building ML-powered Android applications, NLP pipelines, and data-driven web dashboards.
+                            Proficient in Python, machine learning, and full-stack development with a strong mathematical foundation.
+                        </p>
+                        <p class="about-para">
+                            I'm also a <strong>Resource Person</strong> who has delivered Origami-Based Mathematics Workshops 
+                            for both the Mathematics Department and IEEE RSET WIE Affinity Group. My origami practice has 
+                            taught me precision and patience — qualities I apply directly to engineering problems.
+                        </p>
+                        <div class="edu-timeline">
+                            <h3 class="edu-title">Education</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p class="tl-degree">B.Tech — AI & Data Science</p>
+                                    <p class="tl-school">Rajagiri School of Engineering & Technology (Autonomous), Kerala</p>
+                                    <p class="tl-meta">2023 – Present &nbsp;|&nbsp; CGPA: 9.55 / 10</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p class="tl-degree">Class XII — CBSE</p>
+                                    <p class="tl-school">St. Antony's Public School, Kanjirapally</p>
+                                    <p class="tl-meta">2023 &nbsp;|&nbsp; 91.8%</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p class="tl-degree">Class X — CBSE</p>
+                                    <p class="tl-school">DAV Public School, New Panvel</p>
+                                    <p class="tl-meta">2021 &nbsp;|&nbsp; 95.8%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-highlights-col">
+                        <div class="highlight-card">
+                            <i class="fas fa-origami highlight-icon" style="font-size:1.5rem;color:var(--accent)"></i>
+                            <div>
+                                <p class="highlight-title">Origami Artist</p>
+                                <p class="highlight-sub">Delivered workshops under Mathematics Dept & IEEE RSET WIE (2025–26)</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-trophy highlight-icon" style="font-size:1.5rem;color:var(--accent)"></i>
+                            <div>
+                                <p class="highlight-title">S Grade in All Math Courses</p>
+                                <p class="highlight-sub">Highest grade in all Mathematics courses from S1 through S5</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-code highlight-icon" style="font-size:1.5rem;color:var(--accent)"></i>
+                            <div>
+                                <p class="highlight-title">ML & Android Dev</p>
+                                <p class="highlight-sub">Building NLP pipelines, regression models, and Jetpack Compose apps</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-language highlight-icon" style="font-size:1.5rem;color:var(--accent)"></i>
+                            <div>
+                                <p class="highlight-title">Multilingual</p>
+                                <p class="highlight-sub">English · Hindi · Malayalam (Native)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- CV & Education Section -->
-        <section id="cv" class="py-20 md:py-32">
-            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">CV & Technical Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <!-- Education -->
-                <article class="bg-gray-800 rounded-lg shadow-xl p-6">
-                    <h3 class="text-xl font-bold text-white mb-4">Education</h3>
-                    <ul class="list-disc list-inside text-gray-300">
-                        <li>BTech in Artificial Intelligence and Data Science (Persuing), RSET.</li>
-                        <li>High School Science, St Antony’s Public School. </li>
+        <!-- Experience Section -->
+        <section id="experience" class="section-pad section-alt">
+            <div class="section-container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role">Database Engineering Intern</h3>
+                            <p class="exp-company">JusDB Technologies Pvt. Ltd.</p>
+                        </div>
+                        <div class="exp-badge">June 2025</div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Designed and implemented relational databases in <strong>MySQL 8.0</strong> on Linux; authored DDL/DML scripts for production-ready table structures.</li>
+                        <li>Configured user roles, privileges, and <strong>ACID-compliant transaction workflows</strong>, improving data integrity across multi-user environments.</li>
+                        <li>Performed database backup and recovery using <strong>mysqldump</strong>; optimised query performance via indexing and window functions.</li>
                     </ul>
-                </article>
-                <!-- Skills -->
-                <article class="bg-gray-800 rounded-lg shadow-xl p-6">
-                    <h3 class="text-xl font-bold text-white mb-4">Skills & Expertise</h3>
-                    <ul class="list-disc list-inside text-gray-300">
-                        <li>Programming Languages: JavaScript, Python, C, Java, HTML, R, MySql</li>
-                        <li>Tools & Technologies: VS Code, Oracle DB.</li>
-                        <li>Mathematical Skills: Linear Algebra, Probability Theory, Calculus and Optimization. </li>
-                    </ul>
-                </article>
-            </div>
-
-            <!-- Resume Download Button -->
-            <div class="text-center mt-12">
-                <a href="assets/cv.pdf" target="_blank"
-                    class="resume-btn btn-animate inline-flex items-center px-8 py-4 rounded-lg text-white font-semibold transition-all duration-300 hover:scale-105">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    View Full Resume
-                </a>
+                </div>
             </div>
         </section>
 
-        <!-- Projects Section (jQuery Interactive) -->
-        <section id="projects" class="py-20 md:py-32">
-    <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Interactive Projects</h2>
-    <div class="max-w-5xl mx-auto">
-        <div id="main-project-display"
-            class="bg-gray-800 rounded-lg shadow-xl p-6 mb-8 flex flex-col md:flex-row gap-6 items-center transition-all duration-500">
-            <img id="main-project-image" src="https://placehold.co/600x400/1f2937/d1d5db?text=Select+a+Project"
-                alt="Main Project" class="w-full md:w-1/2 rounded-lg">
-            <div class="w-full md:w-1/2">
-                <h3 class="text-2xl font-bold text-white mb-2">
-                    <a id="main-project-title" href="#" target="_blank" class="text-white hover:text-blue-400 transition-colors duration-300 underline"></a>
-                </h3>
-                <p id="main-project-description" class="text-gray-300"></p>
+        <!-- Projects Section -->
+        <section id="projects" class="section-pad">
+            <div class="section-container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-showcase">
+                    <!-- Main Display -->
+                    <div id="main-project-display" class="project-main-display">
+                        <img id="main-project-image" src="https://placehold.co/700x420/0d1117/58a6ff?text=Select+a+Project" alt="Project Preview" class="project-main-img">
+                        <div class="project-main-info">
+                            <span class="project-tag-label" id="main-project-tag">Click a project</span>
+                            <h3 class="project-main-title">
+                                <a id="main-project-title" href="#" target="_blank"></a>
+                            </h3>
+                            <p id="main-project-description" class="project-main-desc"></p>
+                            <div id="main-project-tech" class="project-tech-pills"></div>
+                            <a id="main-project-github" href="#" target="_blank" class="project-github-btn" style="display:none">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="project-thumbnails-grid">
+                        <div class="project-thumb active"
+                             data-title="PennyWise — Intelligent Expense Tracker"
+                             data-tag="Android · NLP · ML"
+                             data-description="Built a hybrid NLP pipeline combining regex-based extraction, merchant name normalisation, and a custom Multinomial Naive Bayes classifier to auto-categorise bank SMS transactions with 91% classification accuracy. Integrated Room database with aggregation queries to surface daily/monthly spending trends, category breakdowns, and top-merchant analytics in real time."
+                             data-tech="Kotlin,NLP,Naive Bayes,Room,Android SDK"
+                             data-image="assets/Pennywise.jpeg"
+                             data-github="https://github.com/navneetmohan/pennywise_build_4">
+                            <div class="thumb-content">
+                                <i class="fas fa-wallet thumb-icon"></i>
+                                <span class="thumb-label">PennyWise</span>
+                                <span class="thumb-sub">Expense Tracker</span>
+                            </div>
+                        </div>
+                        <div class="project-thumb"
+                             data-title="STUDYTracker — Intelligent Study Planner"
+                             data-tag="Android + Web · LWLR · Firebase"
+                             data-description="Implemented a regression-based model (LWLR) to estimate task completion times by modelling time-of-day patterns, fatigue factors, and historical performance — achieving adaptive schedule updates unique to each user. Built a real-time web dashboard with Chart.js showing live task-delay ticking, cumulative drift analysis, and model R² confidence metrics; mirrored core ML functionality in an Android app using Jetpack Compose, Room, and Hilt."
+                             data-tech="Kotlin,Jetpack Compose,Firebase,Chart.js,JavaScript,LWLR"
+                             data-image="assets/Study.jpeg"
+                             data-github="https://github.com/sinan1105/Study-Tracker">
+                            <div class="thumb-content">
+                                <i class="fas fa-brain thumb-icon"></i>
+                                <span class="thumb-label">STUDYTracker</span>
+                                <span class="thumb-sub">Study Planner</span>
+                            </div>
+                        </div>
+                        <div class="project-thumb"
+                             data-title="Hand Cricket Game"
+                             data-tag="Python · Tkinter · GUI"
+                             data-description="Developed a classic hand cricket game with a modern graphical user interface using Python and Tkinter. Features dynamic player-vs-AI gameplay, an interactive toss mechanism, real-time score updates, and support for overs/test match modes. Demonstrates skills in GUI development, game logic, and engaging user experience design."
+                             data-tech="Python,Tkinter,GUI"
+                             data-image="assets/hand.jpg"
+                             data-github="https://github.com/sinan1105/handcricket">
+                            <div class="thumb-content">
+                                <i class="fas fa-cricket thumb-icon"></i>
+                                <span class="thumb-label">Hand Cricket</span>
+                                <span class="thumb-sub">Python Game</span>
+                            </div>
+                        </div>
+                        <div class="project-thumb"
+                             data-title="PDF Manager Toolkit"
+                             data-tag="Python · Tkinter · PyPDF2"
+                             data-description="Built a desktop GUI application enabling users to merge, split, extract, and clean PDF files. Implemented directory-selection dialogs and page-range controls, reducing manual PDF processing time significantly. A practical utility demonstrating Python GUI development and file I/O skills."
+                             data-tech="Python,Tkinter,PyPDF2"
+                             data-image="assets/pdf.jpg"
+                             data-github="https://github.com/sinan1105/pdftoolkit">
+                            <div class="thumb-content">
+                                <i class="fas fa-file-pdf thumb-icon"></i>
+                                <span class="thumb-label">PDF Toolkit</span>
+                                <span class="thumb-sub">Desktop App</span>
+                            </div>
+                        </div>
+                        <div class="project-thumb"
+                             data-title="Portfolio Website"
+                             data-tag="HTML · CSS · JavaScript"
+                             data-description="Developed a fully responsive personal portfolio featuring a dynamic project gallery, live weather widget (OpenWeatherMap API), Dev.to article RSS feed, and an animated contact form with client-side validation. Built with Tailwind CSS and hosted on GitHub Pages."
+                             data-tech="HTML,CSS,JavaScript,Tailwind CSS,GitHub Pages"
+                             data-image="https://placehold.co/700x420/0d1117/58a6ff?text=Portfolio"
+                             data-github="https://github.com/sinan1105/sinak1105.github.io">
+                            <div class="thumb-content">
+                                <i class="fas fa-globe thumb-icon"></i>
+                                <span class="thumb-label">Portfolio</span>
+                                <span class="thumb-sub">This Website</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
-                 data-title="Project A - Hand Cricket Game"
-                 data-description="THand Cricket Game (Python/Tkinter): Developed a classic hand cricket game with a modern graphical user interface (GUI) using Python and Tkinter. The application features a dynamic player-vs-AI gameplay, an interactive toss mechanism, and real-time score updates. This project demonstrates skills in GUI development, game logic implementation, and creating an engaging user experience for a popular casual game."
-                 data-image="assets/hand.jpg"
-                 data-github="https://github.com/sinan1105/handcricket">
-                <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+A" alt="Project A Thumbnail"
-                     class="w-full h-auto object-cover">
-            </div>
+        </section>
 
-            <div class="project-thumbnail cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-md hover:scale-105 transition duration-300"
-                 data-title="Project B - PDF Management System"
-                 data-description="PDF Toolkit (Python/Tkinter): Developed a lightweight desktop application for PDF management using Python and Tkinter. The tool features a clean GUI for merging multiple PDFs, removing pages, and splitting documents by page range. This project demonstrates skills in GUI development, file I/O, and leveraging libraries like PyPDF2 to build a practical utility."
-                 data-image="assets/pdf.jpg"
-                 data-github="https://github.com/sinan1105/pdftoolkit">
-                <img src="https://placehold.co/200x150/1f2937/d1d5db?text=Proj+B" alt="Project B Thumbnail"
-                     class="w-full h-auto object-cover">
+        <!-- Skills Section -->
+        <section id="skills" class="section-pad section-alt">
+            <div class="section-container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category-card">
+                        <h3 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Java (OOP)</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">SQL / PL-SQL</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h3 class="skill-cat-title"><i class="fas fa-robot"></i> AI / ML</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag accent">Machine Learning</span>
+                            <span class="skill-tag accent">NLP (NLTK, SpaCy)</span>
+                            <span class="skill-tag accent">Naive Bayes</span>
+                            <span class="skill-tag accent">LWLR</span>
+                            <span class="skill-tag accent">Feature Engineering</span>
+                            <span class="skill-tag accent">Weka</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h3 class="skill-cat-title"><i class="fas fa-layer-group"></i> Libraries & Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">SciPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Jetpack Compose</span>
+                            <span class="skill-tag">Room</span>
+                            <span class="skill-tag">Hilt</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Chart.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h3 class="skill-cat-title"><i class="fas fa-database"></i> Databases & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL 8.0</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">OracleDB</span>
+                            <span class="skill-tag">Git / GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Jupyter Notebook</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-card">
+                        <h3 class="skill-cat-title"><i class="fas fa-square-root-alt"></i> Mathematics</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag accent">Probability & Statistics</span>
+                            <span class="skill-tag accent">Linear Algebra</span>
+                            <span class="skill-tag accent">Calculus & Optimisation</span>
+                            <span class="skill-tag accent">Data Mining</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            </div>
-    </div>
-</section>
+        </section>
 
-        <!-- Dev.to Articles Section (RSS Feed) -->
-        <section id="articles" class="py-20 md:py-32">
-            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Latest Articles (Dev.to Feed)</h2>
-            <div class="max-w-3xl mx-auto bg-gray-800 rounded-lg shadow-xl p-6">
-                <ul id="dev-articles" class="space-y-4">
-                    <!-- Articles will be populated here by JavaScript -->
-                    <li class="text-center text-gray-400">Loading articles...</li>
-                    <li class="text-center text-gray-400">HEhe articles...</li>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-pad">
+            <div class="section-container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-logo nptel">NPTEL</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Introduction to Programming in C</p>
+                            <p class="cert-meta">Silver Elite · 75%</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo nptel">NPTEL</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Programming in Java</p>
+                            <p class="cert-meta">72%</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo nptel">NPTEL</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Probability Theory & Stochastic Processes</p>
+                            <p class="cert-meta">Silver Elite · 85%</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo swayam">Swayam</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Programming in Python</p>
+                            <p class="cert-meta">Score: 99/100 · 12-week course</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo infosys">Infosys</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Java Essentials</p>
+                            <p class="cert-meta">Dec 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo infosys">Infosys</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Fundamentals of NLP with NLTK & SpaCy</p>
+                            <p class="cert-meta">Dec 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo kaggle">Kaggle</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Python Micro-certification</p>
+                            <p class="cert-meta">Kaggle Learn</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-logo kaggle">Kaggle</div>
+                        <div class="cert-info">
+                            <p class="cert-name">Pandas Micro-certification</p>
+                            <p class="cert-meta">Kaggle Learn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="section-pad section-alt">
+            <div class="section-container">
+                <h2 class="section-title">Latest AI Articles</h2>
+                <p class="section-subtitle">Curated AI/ML articles from Dev.to</p>
+                <ul id="dev-articles" class="articles-list">
+                    <li class="articles-loading">
+                        <div class="loading-spinner"></div>
+                        <span>Fetching articles...</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <!-- Weather Section (OpenWeatherMap API) -->
-        <section id="weather" class="py-20 md:py-32">
-            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Live Weather</h2>
-            <div class="max-w-xl mx-auto corporate-card p-6">
-                <div class="flex items-center justify-center mb-6">
-                    <input type="text" id="city-input" placeholder="Enter city name..."
-                        class="p-2 rounded-l-lg border-none focus:outline-none text-black w-2/3">
-                    <button id="search-btn"
-                        class="p-2 rounded-r-lg bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300">
-                        <i class="fas fa-search"></i> Search
-                    </button>
-                </div>
-                <div id="weather-inf" class="text-center">
+        <!-- Weather Section -->
+        <section id="weather" class="section-pad">
+            <div class="section-container">
+                <h2 class="section-title">Live Weather</h2>
+                <p class="section-subtitle">Check current weather anywhere</p>
+                <div class="weather-search-wrap">
+                    <div class="weather-input-row">
+                        <input type="text" id="city-input" placeholder="Enter city name..." class="weather-input">
+                        <button id="search-btn" class="weather-search-btn">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <div class="quick-cities">
+                        <button class="quick-city-btn" data-city="Mumbai">Mumbai</button>
+                        <button class="quick-city-btn" data-city="Kochi">Kochi</button>
+                        <button class="quick-city-btn" data-city="New Panvel">New Panvel</button>
+                        <button class="quick-city-btn" data-city="Kakkanad">Kakkanad</button>
+                    </div>
+                    <div id="weather-inf" class="weather-result"></div>
                 </div>
             </div>
         </section>
 
-        <!--<script src="js/weather.js" defer></script>>
-
-        Contact Section with iframe and social icons -->
-        <section id="contact" class="py-20 md:py-32">
-            <h2 class="text-3xl font-bold text-center text-blue-400 mb-12">Contact</h2>
-            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-12 mb-12">
-                <!-- Contact Form -->
-                <form id="contact-form" class="corporate-form p-6 space-y-4">
-                    <div>
-                        <label for="name" class="block text-gray-300 mb-2">Name</label>
-                        <input type="text" id="name" name="name" required
-                            class="w-full p-3 rounded-lg bg-gray-700 text-white form-input focus-ring">
+        <!-- Contact Section -->
+        <section id="contact" class="section-pad section-alt">
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's build something great together</p>
+                <div class="contact-grid">
+                    <div class="contact-info-col">
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <p class="contact-info-label">Email</p>
+                                <a href="mailto:sinank1105@gmail.com" class="contact-info-value">sinank1105@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <p class="contact-info-label">Phone</p>
+                                <a href="tel:+919619630263" class="contact-info-value">+91 96196 30263</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <p class="contact-info-label">Location</p>
+                                <p class="contact-info-value">New Panvel, Maharashtra</p>
+                            </div>
+                        </div>
+                        <div class="social-links-row">
+                            <a href="https://github.com/sinan1105" target="_blank" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sinan-k-3a406a2a1" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:sinank1105@gmail.com" class="social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <!-- Map embed -->
+                        <div class="map-embed-wrap">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.9234!2d73.1102!3d18.9928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e8e6e42e15b7%3A0x7db9b5d26c4d8cec!2sNew%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1"
+                                width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
                     </div>
-                    <div>
-                        <label for="email" class="block text-gray-300 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full p-3 rounded-lg bg-gray-700 text-white form-input focus-ring">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-300 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" required
-                            class="w-full p-3 rounded-lg bg-gray-700 text-white form-input focus-ring"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-blue-500 text-white font-medium py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 btn-animate">
-                        Send Message
-                    </button>
-                </form>
-
-                <!-- Iframe for Google Maps -->
-                <div class="corporate-card overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1234567890123!2d76.35797!3d9.99309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807ad1cxyz:0xabcdef1234567890!2sRajagiri%20School%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v0000000000000"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="What's on your mind?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-
-            <!-- Social Media Icons -->
-            <div class="flex justify-center space-x-6 mt-12">
-                <a href="https://github.com/sinan1105" target="_blank"
-                    class="text-gray-300 hover:text-white transition duration-300 flex items-center social-icon">
-                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.5.092.682-.217.682-.483 0-.237-.008-.88-.013-1.724-2.782.604-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.91-.62.069-.608.069-.608 1.007.07 1.532 1.03 1.532 1.03.89 1.528 2.336 1.085 2.903.83.091-.645.349-1.085.635-1.336-2.22-.252-4.555-1.11-4.555-4.93 0-1.088.388-1.978 1.026-2.674-.103-.253-.445-1.264.098-2.63c0 0 .84-.268 2.75 1.025A9.638 9.638 0 0112 6.866c.85.006 1.705.114 2.504.331 1.906-1.293 2.746-1.025 2.746-1.025.544 1.366.202 2.377.099 2.63.64.696 1.025 1.586 1.025 2.674 0 3.828-2.339 4.674-4.562 4.922.357.307.675.915.675 1.848 0 1.336-.012 2.415-.012 2.74 0 .268.18.578.688.482C19.138 20.2 22 16.444 22 12.017 22 6.484 17.522 2 12 2z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/sinan-mohammedkutty-koorikkattil-3a406a2a1/" target="_blank"
-                    class="text-gray-300 hover:text-white transition duration-300 flex items-center social-icon">
-                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M20.447 20.452h-3.554v-5.568c0-1.325-.028-3.044-1.85-3.044-1.853 0-2.136 1.445-2.136 2.946v5.666H9.153V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.606 0 4.267 2.365 4.267 5.454v6.286zM5.337 7.027c-1.144 0-2.073-.93-2.073-2.074s.929-2.074 2.073-2.074 2.073.93 2.073 2.074-.929 2.074-2.073 2.074zM7.006 20.452H3.664V9h3.342v11.452z"
-                            fill-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2025 Sinan K. All Rights Reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2025 Sinan Mohammedkutty Koorikkattil. All Rights Reserved.</p>
+            <p class="footer-stack">Built with HTML · CSS · JavaScript · Tailwind CSS · GitHub Pages</p>
+        </div>
     </footer>
 
-    <!-- External JavaScript file for enhanced functionality -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
