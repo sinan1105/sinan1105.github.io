@@ -14,10 +14,9 @@
 </head>
 
 <body>
-    <!-- Particle canvas background -->
     <canvas id="particles-canvas"></canvas>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu-overlay">
         <button id="close-mobile-menu" class="close-mobile-btn">&times;</button>
         <nav class="mobile-nav-links">
@@ -81,6 +80,10 @@
                     <a href="assets/cv.pdf" target="_blank" class="btn-outline">
                         <i class="fas fa-download"></i> Resume
                     </a>
+                    
+                    <a href="origami/index.html" class="btn-origami">
+                        🕊️ My Origami
+                    </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-pill"><span class="stat-num">9.55</span><span class="stat-label">CGPA</span></div>
@@ -89,7 +92,7 @@
                 </div>
             </div>
             <div class="hero-scroll-hint">
-                <span>Scroll</span>
+                <span></span>
                 <div class="scroll-line"></div>
             </div>
         </section>
@@ -140,7 +143,7 @@
                     </div>
                     <div class="about-highlights-col">
                         <div class="highlight-card">
-                            <i class="fas fa-origami highlight-icon" style="font-size:1.5rem;color:var(--accent)"></i>
+                            <i class="fas fa-star highlight-icon" style="font-size:1.5rem;color:var(--accent)"></i>
                             <div>
                                 <p class="highlight-title">Origami Artist</p>
                                 <p class="highlight-sub">Delivered workshops under Mathematics Dept & IEEE RSET WIE (2025–26)</p>
@@ -198,7 +201,6 @@
             <div class="section-container">
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-showcase">
-                    <!-- Main Display -->
                     <div id="main-project-display" class="project-main-display">
                         <img id="main-project-image" src="https://placehold.co/700x420/0d1117/58a6ff?text=Select+a+Project" alt="Project Preview" class="project-main-img">
                         <div class="project-main-info">
@@ -213,12 +215,11 @@
                             </a>
                         </div>
                     </div>
-                    <!-- Thumbnails -->
                     <div class="project-thumbnails-grid">
                         <div class="project-thumb active"
                              data-title="PennyWise — Intelligent Expense Tracker"
                              data-tag="Android · NLP · ML"
-                             data-description="Built a hybrid NLP pipeline combining regex-based extraction, merchant name normalisation, and a custom Multinomial Naive Bayes classifier to auto-categorise bank SMS transactions with 91% classification accuracy. Integrated Room database with aggregation queries to surface daily/monthly spending trends, category breakdowns, and top-merchant analytics in real time."
+                             data-description="Built a hybrid NLP pipeline combining regex-based extraction, merchant name normalisation, and a custom Multinomial Naive Bayes classifier to auto-categorise bank SMS transactions with 91% classification accuracy."
                              data-tech="Kotlin,NLP,Naive Bayes,Room,Android SDK"
                              data-image="assets/Pennywise.jpeg"
                              data-github="https://github.com/navneetmohan/pennywise_build_4">
@@ -231,7 +232,7 @@
                         <div class="project-thumb"
                              data-title="STUDYTracker — Intelligent Study Planner"
                              data-tag="Android + Web · LWLR · Firebase"
-                             data-description="Implemented a regression-based model (LWLR) to estimate task completion times by modelling time-of-day patterns, fatigue factors, and historical performance — achieving adaptive schedule updates unique to each user. Built a real-time web dashboard with Chart.js showing live task-delay ticking, cumulative drift analysis, and model R² confidence metrics; mirrored core ML functionality in an Android app using Jetpack Compose, Room, and Hilt."
+                             data-description="Implemented a regression-based model (LWLR) to estimate task completion times by modelling time-of-day patterns, fatigue factors, and historical performance — achieving adaptive schedule updates unique to each user."
                              data-tech="Kotlin,Jetpack Compose,Firebase,Chart.js,JavaScript,LWLR"
                              data-image="assets/Study.jpeg"
                              data-github="https://github.com/sinan1105/Study-Tracker">
@@ -244,7 +245,7 @@
                         <div class="project-thumb"
                              data-title="Hand Cricket Game"
                              data-tag="Python · Tkinter · GUI"
-                             data-description="Developed a classic hand cricket game with a modern graphical user interface using Python and Tkinter. Features dynamic player-vs-AI gameplay, an interactive toss mechanism, real-time score updates, and support for overs/test match modes. Demonstrates skills in GUI development, game logic, and engaging user experience design."
+                             data-description="Developed a classic hand cricket game with a modern graphical user interface using Python and Tkinter. Features dynamic player-vs-AI gameplay, an interactive toss mechanism, and real-time score updates."
                              data-tech="Python,Tkinter,GUI"
                              data-image="assets/hand.jpg"
                              data-github="https://github.com/sinan1105/handcricket">
@@ -257,7 +258,7 @@
                         <div class="project-thumb"
                              data-title="PDF Manager Toolkit"
                              data-tag="Python · Tkinter · PyPDF2"
-                             data-description="Built a desktop GUI application enabling users to merge, split, extract, and clean PDF files. Implemented directory-selection dialogs and page-range controls, reducing manual PDF processing time significantly. A practical utility demonstrating Python GUI development and file I/O skills."
+                             data-description="Built a desktop GUI application enabling users to merge, split, extract, and clean PDF files with directory-selection dialogs and page-range controls."
                              data-tech="Python,Tkinter,PyPDF2"
                              data-image="assets/pdf.jpg"
                              data-github="https://github.com/sinan1105/pdftoolkit">
@@ -270,7 +271,7 @@
                         <div class="project-thumb"
                              data-title="Portfolio Website"
                              data-tag="HTML · CSS · JavaScript"
-                             data-description="Developed a fully responsive personal portfolio featuring a dynamic project gallery, live weather widget (OpenWeatherMap API), Dev.to article RSS feed, and an animated contact form with client-side validation. Built with Tailwind CSS and hosted on GitHub Pages."
+                             data-description="Developed a fully responsive personal portfolio featuring a dynamic project gallery, live weather widget, Dev.to article feed, and animated contact form."
                              data-tech="HTML,CSS,JavaScript,Tailwind CSS,GitHub Pages"
                              data-image="https://placehold.co/700x420/0d1117/58a6ff?text=Portfolio"
                              data-github="https://github.com/sinan1105/sinak1105.github.io">
@@ -293,14 +294,10 @@
                     <div class="skill-category-card">
                         <h3 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">Java (OOP)</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">R</span>
-                            <span class="skill-tag">SQL / PL-SQL</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Python</span><span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Java (OOP)</span><span class="skill-tag">C</span>
+                            <span class="skill-tag">R</span><span class="skill-tag">SQL / PL-SQL</span>
+                            <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span>
                             <span class="skill-tag">JavaScript</span>
                         </div>
                     </div>
@@ -318,27 +315,19 @@
                     <div class="skill-category-card">
                         <h3 class="skill-cat-title"><i class="fas fa-layer-group"></i> Libraries & Frameworks</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">SciPy</span>
-                            <span class="skill-tag">Matplotlib</span>
-                            <span class="skill-tag">Jetpack Compose</span>
-                            <span class="skill-tag">Room</span>
-                            <span class="skill-tag">Hilt</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                            <span class="skill-tag">Chart.js</span>
+                            <span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">scikit-learn</span><span class="skill-tag">SciPy</span>
+                            <span class="skill-tag">Matplotlib</span><span class="skill-tag">Jetpack Compose</span>
+                            <span class="skill-tag">Room</span><span class="skill-tag">Hilt</span>
+                            <span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Chart.js</span>
                         </div>
                     </div>
                     <div class="skill-category-card">
                         <h3 class="skill-cat-title"><i class="fas fa-database"></i> Databases & Tools</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">MySQL 8.0</span>
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">OracleDB</span>
-                            <span class="skill-tag">Git / GitHub</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Jupyter Notebook</span>
+                            <span class="skill-tag">MySQL 8.0</span><span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">OracleDB</span><span class="skill-tag">Git / GitHub</span>
+                            <span class="skill-tag">VS Code</span><span class="skill-tag">Jupyter Notebook</span>
                         </div>
                     </div>
                     <div class="skill-category-card">
@@ -359,68 +348,22 @@
             <div class="section-container">
                 <h2 class="section-title">Certifications</h2>
                 <div class="certs-grid">
-                    <div class="cert-card">
-                        <div class="cert-logo nptel">NPTEL</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Introduction to Programming in C</p>
-                            <p class="cert-meta">Silver Elite · 75%</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo nptel">NPTEL</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Programming in Java</p>
-                            <p class="cert-meta">72%</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo nptel">NPTEL</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Probability Theory & Stochastic Processes</p>
-                            <p class="cert-meta">Silver Elite · 85%</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo swayam">Swayam</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Programming in Python</p>
-                            <p class="cert-meta">Score: 99/100 · 12-week course</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo infosys">Infosys</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Java Essentials</p>
-                            <p class="cert-meta">Dec 2024</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo infosys">Infosys</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Fundamentals of NLP with NLTK & SpaCy</p>
-                            <p class="cert-meta">Dec 2025</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo kaggle">Kaggle</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Python Micro-certification</p>
-                            <p class="cert-meta">Kaggle Learn</p>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-logo kaggle">Kaggle</div>
-                        <div class="cert-info">
-                            <p class="cert-name">Pandas Micro-certification</p>
-                            <p class="cert-meta">Kaggle Learn</p>
-                        </div>
-                    </div>
+                    <div class="cert-card"><div class="cert-logo nptel">NPTEL</div><div class="cert-info"><p class="cert-name">Introduction to Programming in C</p><p class="cert-meta">Silver Elite · 75%</p></div></div>
+                    <div class="cert-card"><div class="cert-logo nptel">NPTEL</div><div class="cert-info"><p class="cert-name">Programming in Java</p><p class="cert-meta">72%</p></div></div>
+                    <div class="cert-card"><div class="cert-logo nptel">NPTEL</div><div class="cert-info"><p class="cert-name">Probability Theory & Stochastic Processes</p><p class="cert-meta">Silver Elite · 85%</p></div></div>
+                    <div class="cert-card"><div class="cert-logo swayam">Swayam</div><div class="cert-info"><p class="cert-name">Programming in Python</p><p class="cert-meta">Score: 99/100 · 12-week course</p></div></div>
+                    <div class="cert-card"><div class="cert-logo infosys">Infosys</div><div class="cert-info"><p class="cert-name">Java Essentials</p><p class="cert-meta">Dec 2024</p></div></div>
+                    <div class="cert-card"><div class="cert-logo infosys">Infosys</div><div class="cert-info"><p class="cert-name">Fundamentals of NLP with NLTK & SpaCy</p><p class="cert-meta">Dec 2025</p></div></div>
+                    <div class="cert-card"><div class="cert-logo kaggle">Kaggle</div><div class="cert-info"><p class="cert-name">Python Micro-certification</p><p class="cert-meta">Kaggle Learn</p></div></div>
+                    <div class="cert-card"><div class="cert-logo kaggle">Kaggle</div><div class="cert-info"><p class="cert-name">Pandas Micro-certification</p><p class="cert-meta">Kaggle Learn</p></div></div>
                 </div>
             </div>
         </section>
 
+       
+
         <!-- Articles Section -->
-        <section id="articles" class="section-pad section-alt">
+        <section id="articles" class="section-pad">
             <div class="section-container">
                 <h2 class="section-title">Latest AI Articles</h2>
                 <p class="section-subtitle">Curated AI/ML articles from Dev.to</p>
@@ -434,7 +377,7 @@
         </section>
 
         <!-- Weather Section -->
-        <section id="weather" class="section-pad">
+        <section id="weather" class="section-pad section-alt">
             <div class="section-container">
                 <h2 class="section-title">Live Weather</h2>
                 <p class="section-subtitle">Check current weather anywhere</p>
@@ -457,7 +400,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section-pad section-alt">
+        <section id="contact" class="section-pad">
             <div class="section-container">
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="section-subtitle">Let's build something great together</p>
@@ -485,22 +428,13 @@
                             </div>
                         </div>
                         <div class="social-links-row">
-                            <a href="https://github.com/sinan1105" target="_blank" class="social-link" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/sinan-k-3a406a2a1" target="_blank" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="mailto:sinank1105@gmail.com" class="social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
+                            <a href="https://github.com/sinan1105" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sinan-k-3a406a2a1" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:sinank1105@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                         </div>
-                        <!-- Map embed -->
                         <div class="map-embed-wrap">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.9234!2d73.1102!3d18.9928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e8e6e42e15b7%3A0x7db9b5d26c4d8cec!2sNew%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1"
-                                width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy">
-                            </iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.9234!2d73.1102!3d18.9928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e8e6e42e15b7%3A0x7db9b5d26c4d8cec!2sNew%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1"
+                                width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                     <form id="contact-form" class="contact-form">
@@ -525,7 +459,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-inner">
             <p class="footer-copy">&copy; 2025 Sinan Mohammedkutty Koorikkattil. All Rights Reserved.</p>
