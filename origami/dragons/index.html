@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
     <a href="../index.html" class="back-btn">
-        ← Back to Origami Gallery
+        â† Back to Origami Gallery
     </a>
 </header>
 
@@ -28,11 +28,12 @@
     <section class="category-grid">
         
 
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon1.jpg"
                  alt="Devil Dragon"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Devil Dragon</h2>
 
@@ -42,11 +43,12 @@
 
         </div>
 
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon2.jpg"
                  alt="Devil Dragon (Black)"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Devil Dragon (Black)</h2>
 
@@ -55,11 +57,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon3.jpg"
                  alt="Helios Devil Dragon"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Helios Devil Dragon</h2>
 
@@ -68,11 +71,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon6.jpg"
                  alt="Devil Dragon v2"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Devil Dragon v2</h2>
 
@@ -81,11 +85,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon5.jpg"
                  alt="Dragon"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Dragon</h2>
 
@@ -94,11 +99,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon4.jpg"
                  alt="Dragon Cluster"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Dragon Cluster</h2>
 
@@ -108,11 +114,12 @@
 
         </div>
         
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="dragon7.jpg"
                  alt="Devil Dragon Cluster"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Devil Dragon Cluster</h2>
 
@@ -130,5 +137,14 @@
 
 </main>
 
+<div id="lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img">
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+</div>
+
+<script src="../script.js"></script>
 </body>
 </html>
+

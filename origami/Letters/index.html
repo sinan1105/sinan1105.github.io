@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
     <a href="../index.html" class="back-btn">
-        ← Back to Origami Gallery
+        â† Back to Origami Gallery
     </a>
 </header>
 
@@ -28,11 +28,12 @@
     <section class="category-grid">
         
 
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="word1.jpg"
                  alt="Sr Alphonsa"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Sr Alphonsa</h2>
 
@@ -42,11 +43,12 @@
 
         </div>
 
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="word2.jpg"
                  alt="Dr Binu R"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Dr Binu R</h2>
 
@@ -55,11 +57,26 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
+
+            <img src="word4.jpg"
+                 alt="adesso"
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
+
+            <h2>adesso</h2>
+
+            <p>
+                Company where i do Internship.
+            </p>
+
+        </div>
+        <div class="category-card reveal">
 
             <img src="word3.jpg"
                  alt="PREAMBLE"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>PREAMBLE</h2>
 
@@ -77,5 +94,14 @@
 
 </main>
 
+<div id="lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img">
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+</div>
+
+<script src="../script.js"></script>
 </body>
 </html>
+

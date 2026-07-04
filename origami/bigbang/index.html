@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Origami Hats</title>
+    <title>Origami Action Models</title>
 
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -20,20 +20,19 @@
 <main class="gallery-page">
 
     <section class="hero">
-        <h1>Origami ?</h1>
-        <p>Action Models</p>
+        <h1>Origami Action Models</h1>
         <p>Click on image to view origami in action</p>
     </section>
 
     <section class="category-grid">
         
 
-        <a href="flasher-hat.html" class="category-card">
+        <a href="flasher-hat.html" class="category-card reveal">
 
             
             <img src="hat1.jpg"
                 alt="Flasher Big Bang"
-                class="model-image">
+                class="model-image lightbox-image">
 
 
 
@@ -44,12 +43,12 @@
             </p>
 
         </a>
-        <a href="paco.html" class="category-card">
+        <a href="paco.html" class="category-card reveal">
 
             
             <img src="paco.jpg"
                 alt="Paco Paco"
-                class="model-image">
+                class="model-image lightbox-image">
 
 
 
@@ -70,5 +69,13 @@
 
 </main>
 
+<div id="lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img">
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+</div>
+
+<script src="../script.js"></script>
 </body>
 </html>

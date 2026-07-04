@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
     <a href="../index.html" class="back-btn">
-        ← Back to Origami Gallery
+        â† Back to Origami Gallery
     </a>
 </header>
 
@@ -28,11 +28,12 @@
     <section class="category-grid">
         
 
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="rose1.jpg"
                  alt="Origami Rose"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Origami Rose</h2>
 
@@ -42,11 +43,12 @@
 
         </div>
 
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="rose2.jpg"
                  alt="Pink Velvet Rose"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Pink Velvet Rose</h2>
 
@@ -55,11 +57,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="rose3.jpg"
                  alt="Dawn Rose"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Dawn Rose</h2>
 
@@ -68,11 +71,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="rose4.jpg"
                  alt="Rose Bouquet"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Rose Bouquet</h2>
 
@@ -81,11 +85,12 @@
             </p>
 
         </div>
-        <div class="category-card">
+        <div class="category-card reveal">
 
             <img src="rose5.jpg"
-                 alt="Mini Hat"
-                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+                 alt="Simple Rose"
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
 
             <h2>Simple Rose</h2>
 
@@ -94,6 +99,21 @@
             </p>
 
         </div>
+        <div class="category-card reveal">
+
+            <img src="rose6.jpg"
+                 alt="Simple Rose"
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;"
+                 class="model-image lightbox-image">
+
+            <h2>Rose Petal</h2>
+
+            <p>
+                Size: 21 * 21 cm, Thickness: 80 gsm.
+            </p>
+
+        </div>
+        
         
         
        
@@ -104,5 +124,14 @@
 
 </main>
 
+<div id="lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img">
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+</div>
+
+<script src="../script.js"></script>
 </body>
 </html>
+
